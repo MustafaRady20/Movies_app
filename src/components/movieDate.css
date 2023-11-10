@@ -1,0 +1,98 @@
+.banner .date {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+    z-index: 1000;
+}
+
+.banner .date.active {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner .date h2 {
+    font-family: 'Racing Sans One', cursive;
+    color: white;
+    opacity: .5;
+    text-transform: uppercase;
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 50px rgba(255, 255, 255, .4);
+
+}
+
+.banner .trailer {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1000;
+
+}
+
+.banner .trailer.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.banner .trailer p {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.banner .trailer .playbtn {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer !important;
+    transition: 1s;
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    background: transparent;
+}
+
+.trailer .playbtn ion-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.trailer .playbtn::before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    border: 10px solid white;
+
+    border-radius: 50%;
+    content: "";
+    animation: button 1s linear infinite;
+}
+
+@keyframes button {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        filter: blur(4px);
+    }
+
+    50% {
+        opacity: 1;
+        /* filter: blur(10px); */
+    }
+}
